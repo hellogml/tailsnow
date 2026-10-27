@@ -1,23 +1,25 @@
-# <a href="https://tailsnow.com/">TailsNow</a> — A browser-based coin toss driven by cryptographic randomness.
+# [TailsNow](https://tailsnow.com/) — a browser-based coin flip and random generator powered by cryptographic randomness
 
-I built this as a lightweight utility for those recurring moments where you just need a perfectly fair binary outcome and don't want to reach for a physical coin. Whether it is settling a trivial decision or breaking a tie in a quick script test, having a reliable toss available in a browser tab is surprisingly convenient. The tool runs entirely on the client side. There is no backend processing and no data upload, so every flip stays local to your machine. The randomness does not rely on basic math functions; it uses cryptographic randomness to keep the heads or tails distribution genuinely unpredictable. You get a real flip animation, and the page maintains a live tally along with head and tail history statistics so you can verify the distribution yourself over repeated tosses.
+I built this as a lightweight utility for the kind of trivial decision fatigue that hits during development sprints — picking a test branch, breaking ties in code review debates, or seeding a quick random choice when you don't want to wire up a full scripting environment. It runs entirely in the browser. There is no backend server, no request payload leaving your machine, and no upload of session data. The randomness comes from the Web Crypto API rather than the default Math.random, which makes the toss output suitable even when you need something closer to a fair distribution than a toy PRNG.
 
-The shortest way to use it is to simply open the page and trigger a toss. The interface is intentionally minimal: you click the coin or the flip button, watch the animation spin through heads and tails, and read the final result once the coin settles. You can flip again as many times as you need another outcome. If you are running repeated tests, the live tally keeps count automatically.
+The tool keeps a live tally of every toss in the current session so you can sanity-check the distribution by eye. It works on any device with a modern browser, requires no installation, and costs nothing to use. If you need to [flip a coin](https://tailsnow.com/) right now, the page loads ready to toss — no setup screens, no configuration step.
 
-Here is what a single interaction looks like conceptually:
+## Quick example
 
-```text
-Input:  click flip button
-Output: Heads
+Open the page, click the coin or the flip button, and read the settled result:
+
+```
+Click coin  →  Heads
+Click coin  →  Tails
+Click coin  →  Heads
 ```
 
-The live history statistics update immediately after each toss, giving you a clean result without any extra configuration. You can try the <a href="https://tailsnow.com/">coin flip</a> directly in your browser without installing anything.
+The live tally updates as `Heads: 2, Tails: 1`. Each click is one independent toss, and the animation spins through faces before settling so you can visually confirm the flip actually happened rather than returning a pre-baked string.
 
 ## Where to read more
 
-Complete tutorials, worked examples and the full documentation live on the site: <a href="https://tailsnow.com/">TailsNow</a>
+Complete tutorials, worked examples and the full documentation live on the site: [TailsNow](https://tailsnow.com/)
 
 ## License
 
 Source code is MIT-licensed. Website articles and descriptive content are NOT included in this license and remain copyrighted.
-
