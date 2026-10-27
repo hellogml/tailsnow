@@ -1,23 +1,23 @@
-# TailsNow — Browser-based coin flip with cryptographic randomness
+# <a href="https://tailsnow.com/">TailsNow</a> — A browser-based coin toss driven by cryptographic randomness.
 
-TailsNow is a small side project I built to scratch a common itch: needing a genuinely fair coin flip without digging for loose change or trusting whatever random widget shows up in search results. It runs entirely in the browser. There is no backend, no server-side log, and nothing gets uploaded — the toss happens locally and the result stays on your device.
+I built this as a lightweight utility for those recurring moments where you just need a perfectly fair binary outcome and don't want to reach for a physical coin. Whether it is settling a trivial decision or breaking a tie in a quick script test, having a reliable toss available in a browser tab is surprisingly convenient. The tool runs entirely on the client side. There is no backend processing and no data upload, so every flip stays local to your machine. The randomness does not rely on basic math functions; it uses cryptographic randomness to keep the heads or tails distribution genuinely unpredictable. You get a real flip animation, and the page maintains a live tally along with head and tail history statistics so you can verify the distribution yourself over repeated tosses.
 
-What sets it apart from a basic `Math.random()` toy is the randomness source. TailsNow pulls from cryptographic randomness rather than a pseudo-random number generator, which makes the outcome meaningfully harder to predict. The page also keeps a live tally of heads and tails history statistics so you can sanity-check distribution over repeated flips, and there is a real flip animation that spins through heads and tails before settling. No app install is required and it works on any device with a modern browser.
+The shortest way to use it is to simply open the page and trigger a toss. The interface is intentionally minimal: you click the coin or the flip button, watch the animation spin through heads and tails, and read the final result once the coin settles. You can flip again as many times as you need another outcome. If you are running repeated tests, the live tally keeps count automatically.
 
-You can try the [coin flip](https://tailsnow.com/) directly — just land on the page, click the coin or the flip button, and read the result once it settles.
-
-Shortest possible usage:
+Here is what a single interaction looks like conceptually:
 
 ```text
-Click coin  ->  "Heads"
+Input:  click flip button
+Output: Heads
 ```
 
-That is the whole loop. Click again for another outcome, as many times as you need. The [live tally](https://tailsnow.com/) updates alongside each toss so you can watch the running head/tail count in real time.
+The live history statistics update immediately after each toss, giving you a clean result without any extra configuration. You can try the <a href="https://tailsnow.com/">coin flip</a> directly in your browser without installing anything.
 
 ## Where to read more
 
-Complete tutorials, worked examples and the full documentation live on the site: [TailsNow](https://tailsnow.com/)
+Complete tutorials, worked examples and the full documentation live on the site: <a href="https://tailsnow.com/">TailsNow</a>
 
 ## License
 
 Source code is MIT-licensed. Website articles and descriptive content are NOT included in this license and remain copyrighted.
+
